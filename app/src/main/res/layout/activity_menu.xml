@@ -4,45 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MenuActivity">
 
-    <EditText
-        android:id="@+id/email"
+    <Button
+        android:id="@+id/lista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:ems="10"
-        android:hint="Login"
-        android:inputType="textPersonName" />
+        android:text="Zobacz listę zleceń" />
 
-    <EditText
-        android:id="@+id/pass"
+    <Button
+        android:id="@+id/edycja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="125dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:text="Edycja zleneń" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/wyloguj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:text="login" />
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="275dp"
-        android:layout_centerHorizontal="true"
-        android:text="rejestracja" />
+        android:text="Wyloguj się" />
 </RelativeLayout>

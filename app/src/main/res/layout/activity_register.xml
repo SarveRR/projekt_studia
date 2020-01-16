@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".RegisterActivity">
 
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="false"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:hint="Login"
+        android:hint="Email"
+        android:layout_centerHorizontal="true"
         android:inputType="textPersonName" />
 
     <EditText
@@ -28,21 +30,23 @@
         android:hint="Password"
         android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/login"
+    <EditText
+        android:id="@+id/cpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:text="login" />
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="275dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="rejestracja" />
+        android:layout_marginBottom="200dp"
+        android:text="register" />
 </RelativeLayout>
