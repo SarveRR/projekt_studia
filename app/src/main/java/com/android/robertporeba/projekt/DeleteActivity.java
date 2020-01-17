@@ -33,16 +33,26 @@ public class DeleteActivity extends AppCompatActivity {
                 }
                 else{
                     int id_db=0;
-                    id_db=Integer.parseInt(temp);
 
-                    Integer dele = db.usunZlecenie(id_db);
+                    try
+                    {
+                        id_db=Integer.parseInt(temp);
 
-                    if(dele==1){
-                        Toast.makeText(getApplicationContext(),"Usunięto",Toast.LENGTH_SHORT).show();
+                        Integer dele = db.usunZlecenie(id_db);
+
+                        if(dele==1){
+                            Toast.makeText(getApplicationContext(),"Usunięto",Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    else{
-                        Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                    catch (NumberFormatException e)
+                    {
+                        Toast.makeText(getApplicationContext(),"Zła wartość",Toast.LENGTH_SHORT).show();
                     }
+
+
                 }
             }
         });

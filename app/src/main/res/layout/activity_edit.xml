@@ -15,7 +15,7 @@
         android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="Numer zlecenia"
-        android:inputType="textPersonName" />
+        android:inputType="numberSigned" />
 
     <EditText
         android:id="@+id/nazwa"

@@ -37,15 +37,23 @@ public class EditActivity extends AppCompatActivity {
                 }
                 else{
                     int id_db=0;
-                    id_db=Integer.parseInt(temp);
 
-                    boolean update = db.editZlecenie(id_db,nazwa_db,status_db);
+                    try
+                    {
+                        id_db=Integer.parseInt(temp);
 
-                    if(update==true){
-                        Toast.makeText(getApplicationContext(),"Edytowano",Toast.LENGTH_SHORT).show();
+                        boolean update = db.editZlecenie(id_db,nazwa_db,status_db);
+
+                        if(update==true){
+                            Toast.makeText(getApplicationContext(),"Edytowano",Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                        }
                     }
-                    else{
-                        Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                    catch (NumberFormatException e)
+                    {
+                        Toast.makeText(getApplicationContext(),"Zła wartość",Toast.LENGTH_SHORT).show();
                     }
                 }
             }
