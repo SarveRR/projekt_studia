@@ -17,7 +17,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        wyloguj = (Button)findViewById(R.id.usun);
+        wyloguj = (Button)findViewById(R.id.wyloguj);
         lista = (Button)findViewById(R.id.lista);
         nowe = (Button)findViewById(R.id.nowe);
         edytuj = (Button)findViewById(R.id.edytuj);
