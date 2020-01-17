@@ -27,16 +27,22 @@ public class DeleteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String temp= id.getText().toString();
-                int id_db=0;
-                id_db=Integer.parseInt(temp);
 
-                Integer dele = db.usunZlecenie(id_db);
-
-                if(dele==1){
-                    Toast.makeText(getApplicationContext(),"Usunięto",Toast.LENGTH_SHORT).show();
+                if (temp.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Puste pole",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                    int id_db=0;
+                    id_db=Integer.parseInt(temp);
+
+                    Integer dele = db.usunZlecenie(id_db);
+
+                    if(dele==1){
+                        Toast.makeText(getApplicationContext(),"Usunięto",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });

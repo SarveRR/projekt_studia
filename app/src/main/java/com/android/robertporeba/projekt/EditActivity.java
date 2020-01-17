@@ -30,18 +30,23 @@ public class EditActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String nazwa_db= nazwa.getText().toString();
                 String status_db= status.getText().toString();
-
                 String temp= id.getText().toString();
-                int id_db=0;
-                id_db=Integer.parseInt(temp);
 
-                boolean update = db.editZlecenie(id_db,nazwa_db,status_db);
-
-                if(update==true){
-                    Toast.makeText(getApplicationContext(),"Edytowano",Toast.LENGTH_SHORT).show();
+                if (temp.isEmpty()){
+                    Toast.makeText(getApplicationContext(),"Puste pole",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                    int id_db=0;
+                    id_db=Integer.parseInt(temp);
+
+                    boolean update = db.editZlecenie(id_db,nazwa_db,status_db);
+
+                    if(update==true){
+                        Toast.makeText(getApplicationContext(),"Edytowano",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
