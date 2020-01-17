@@ -23,10 +23,10 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         db = new DatabaseHelper(this);
-        email_dane=(EditText)findViewById(R.id.email);
-        pass_dane=(EditText)findViewById(R.id.pass);
+        email_dane=(EditText)findViewById(R.id.id);
+        pass_dane=(EditText)findViewById(R.id.status);
         cpass_dane=(EditText)findViewById(R.id.cpass);
-        register=(Button)findViewById(R.id.register);
+        register=(Button)findViewById(R.id.edytuj);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else{
                     if(pass.equals(cpass)){
-                        Boolean chkemail = db.chkemail(email);
+                        boolean chkemail = db.chkemail(email);
                         if(chkemail==true){
-                            Boolean insert = db.insert(email,pass);
+                            boolean insert = db.insert(email,pass);
                             if(insert==true){
                                 Toast.makeText(getApplicationContext(),"Rejestracja udana",Toast.LENGTH_SHORT).show();
 

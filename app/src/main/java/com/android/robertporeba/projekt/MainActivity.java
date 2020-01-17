@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         db = new DatabaseHelper(this);
-        email_dane = (EditText)findViewById(R.id.email);
-        pass_dane = (EditText)findViewById(R.id.pass);
+        email_dane = (EditText)findViewById(R.id.id);
+        pass_dane = (EditText)findViewById(R.id.status);
         login = (Button) findViewById(R.id.login);
-        register = (Button)findViewById(R.id.register);
+        register = (Button)findViewById(R.id.edytuj);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

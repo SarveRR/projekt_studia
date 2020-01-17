@@ -1,0 +1,49 @@
+package com.android.robertporeba.projekt;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class EditActivity extends AppCompatActivity {
+
+    DatabaseHelper db;
+    EditText id,nazwa,status;
+    Button edit;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit);
+
+        db = new DatabaseHelper(this);
+        id = (EditText) findViewById(R.id.id);
+        nazwa = (EditText) findViewById(R.id.nazwa);
+        status = (EditText) findViewById(R.id.status);
+        edit = (Button)findViewById(R.id.edytuj);
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nazwa_db= nazwa.getText().toString();
+                String status_db= status.getText().toString();
+
+                String temp= id.getText().toString();
+                int id_db=0;
+                id_db=Integer.parseInt(temp);
+
+                boolean update = db.editZlecenie(id_db,nazwa_db,status_db);
+
+                if(update==true){
+                    Toast.makeText(getApplicationContext(),"Edytowano",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Zły numer",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}

@@ -10,16 +10,18 @@ import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button wyloguj,lista,edycja;
+    Button wyloguj,lista,nowe,edytuj,usun;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        wyloguj = (Button)findViewById(R.id.wyloguj);
+        wyloguj = (Button)findViewById(R.id.usun);
         lista = (Button)findViewById(R.id.lista);
-        edycja = (Button)findViewById(R.id.edycja);
+        nowe = (Button)findViewById(R.id.nowe);
+        edytuj = (Button)findViewById(R.id.edytuj);
+        usun = (Button)findViewById(R.id.usun);
 
         wyloguj.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +36,32 @@ public class MenuActivity extends AppCompatActivity {
         lista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"GEJ DETECTED",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MenuActivity.this, ListActivity.class);
+                startActivity(i);
             }
         });
 
-        edycja.setOnClickListener(new View.OnClickListener() {
+        nowe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"STRONG GEJ DETECTED",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MenuActivity.this, NewActivity.class);
+                startActivity(i);
+            }
+        });
+
+        edytuj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MenuActivity.this, EditActivity.class);
+                startActivity(i);
+            }
+        });
+
+        usun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MenuActivity.this, DeleteActivity.class);
+                startActivity(i);
             }
         });
     }

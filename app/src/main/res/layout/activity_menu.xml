@@ -16,13 +16,22 @@
         android:text="Zobacz listę zleceń" />
 
     <Button
-        android:id="@+id/edycja"
+        android:id="@+id/nowe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="125dp"
-        android:text="Edycja zleneń" />
+        android:text="Dodaj nowe zlecenie" />
+
+    <Button
+        android:id="@+id/edytuj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="Edytuj zlecenie" />
 
     <Button
         android:id="@+id/wyloguj"
@@ -30,6 +39,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="350dp"
         android:text="Wyloguj się" />
+
+    <Button
+        android:id="@+id/usun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:text="Usuń zlecenie" />
+
 </RelativeLayout>

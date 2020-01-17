@@ -4,17 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".EditActivity">
 
     <EditText
         android:id="@+id/id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:hint="Login"
+        android:hint="Numer zlecenia"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/nazwa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="125dp"
+        android:ems="10"
+        android:hint="Nowa nazwa"
         android:inputType="textPersonName" />
 
     <EditText
@@ -22,26 +33,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="125dp"
-        android:ems="10"
-        android:hint="Hasło"
-        android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="200dp"
-        android:text="login" />
+        android:ems="10"
+        android:hint="Nowy status"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/edytuj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="275dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="rejestracja" />
+        android:layout_marginTop="275dp"
+        android:text="Edytuj" />
+
 </RelativeLayout>
