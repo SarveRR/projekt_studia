@@ -77,14 +77,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.delete("zlecenia","id=?",new String[]{id.toString()});
     }
 
-    public boolean editZlecenie(Integer id, String nazwa, String status){
+    public Integer editZlecenie(Integer id, String nazwa, String status){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("nazwa",nazwa);
         contentValues.put("status",status);
 
-        db.update("zlecenia",contentValues,"id="+id,null);
-
-        return true;
+        int up = db.update("zlecenia",contentValues,"id="+id,null);
+        return up;
     }
 }

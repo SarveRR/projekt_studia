@@ -42,9 +42,9 @@ public class EditActivity extends AppCompatActivity {
                     {
                         id_db=Integer.parseInt(temp);
 
-                        boolean update = db.editZlecenie(id_db,nazwa_db,status_db);
+                        int update = db.editZlecenie(id_db,nazwa_db,status_db);
 
-                        if(update==true){
+                        if(update==1){
                             Toast.makeText(getApplicationContext(),"Edytowano",Toast.LENGTH_SHORT).show();
                         }
                         else{
