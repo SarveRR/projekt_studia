@@ -1,4 +1,4 @@
-# projekt_studia
+# AndroidSimpleCRUD
 
 Simple application in Android studio (java) with SQLite.
 
